@@ -1,0 +1,60 @@
+.wrapper {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url(https://www.gonetspeed.com/wp-content/uploads/2022/03/bg-homepage-img-header-scaled.jpg);
+  background-position: center;
+  color: white;
+
+  p {
+    font-size: 57px;
+    padding: 0px 30px;
+  }
+
+  .main-top {
+    height: 350px;
+    width: 60%;
+  }
+}
+
+.cards-wrapper {
+  display: flex;
+  margin-top: -70px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  .example-card {
+    max-width: 350px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    mat-card-subtitle {
+      font-size: 16px;
+    }
+
+    mat-card-title {
+      color: black;
+      font-size: 39px;
+      justify-content: center;
+      display: flex;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .wrapper {
+    p {
+      font-size: 35px;
+    }
+
+    .main-top {
+      width: 90%;
+    }
+  }
+}

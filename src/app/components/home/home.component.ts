@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   offersData: any[] = [];
+
   constructor(
     private communicationService: CommunicationService,
     private authService: AuthService,
