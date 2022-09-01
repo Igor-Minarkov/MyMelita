@@ -7,13 +7,18 @@
       />
       <img
         src="https://www.melita.com/wp-content/plugins/melita-tv-pages/img/nextv/nextv-page/nextv-discover-more.png"
+        class="img-bottom"
       />
     </div>
   </div>
 
   <div class="cards-wrapper" *ngFor="let offer of offersData">
     <mat-card class="card">
+      <img
+        src="https://www.melita.com/wp-content/plugins/melita-homepage/img/icons.png"
+      />
       <h2>{{ offer.name }}</h2>
+      <button mat-button>More</button>
     </mat-card>
   </div>
 </div>

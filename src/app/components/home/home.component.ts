@@ -13,9 +13,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.authService
       .getOffers()
-      .subscribe(
-        (result) => ((this.offersData = result), console.log(this.offersData))
-      );
+      .subscribe((result) => (this.offersData = result));
   }
 
   logout() {

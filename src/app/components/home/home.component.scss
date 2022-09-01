@@ -11,7 +11,6 @@
   .background {
     display: flex;
     justify-content: space-between;
-
     color: white;
 
     .imgs-wrapper {
@@ -24,6 +23,10 @@
         #178d83,
         #22ab7b
       );
+
+      .img-bottom {
+        margin-top: 270px;
+      }
     }
 
     img {
@@ -41,20 +44,38 @@
       position: absolute;
       margin-top: -100px;
       margin-left: auto;
-      margin-right: auto;
+      margin-right: 300px;
       left: 0;
       right: 0;
       text-align: center;
       border: 3px solid white;
       border-radius: 3px;
       color: black;
-      box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-      -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+      padding: 10px;
+      border-radius: 60px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      h2,
+      h3 {
+        font-weight: 500;
+      }
+      img {
+        width: 80%;
+      }
     }
 
     .card:hover {
       cursor: pointer;
+      border: 6px solid white;
     }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .card {
+    margin-right: auto !important;
   }
 }
