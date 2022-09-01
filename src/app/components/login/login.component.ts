@@ -13,6 +13,11 @@ export class LoginComponent implements OnInit {
   loginInfo: object = {};
   token: string = '';
   loading: boolean = false;
+  hide = true;
+
+  get passwordInput() {
+    return this.login.get('password');
+  }
 
   constructor(
     private fb: FormBuilder,

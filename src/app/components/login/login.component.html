@@ -10,11 +10,25 @@
 
       <mat-form-field class="matInput">
         <mat-placeholder class="mat-placeholder">Password</mat-placeholder>
-        <input matInput formControlName="password" />
+        <input
+          [type]="hide ? 'password' : 'text'"
+          matInput
+          formControlName="password"
+        />
+        <mat-icon matSuffix (click)="hide = !hide" class="visibility-icon">{{
+          hide ? "visibility_off" : "visibility"
+        }}</mat-icon>
       </mat-form-field>
 
       <div class="form-bottom">
-        <div class="form-bottom-left">Remember me ?</div>
+        <div class="form-bottom-left">
+          <input
+            type="checkbox"
+            id="vehicle1"
+            name="vehicle1"
+            value="Bike"
+          />Remember me ?
+        </div>
         <div><i class="bi bi-1-circle"></i>Forgot Password?</div>
       </div>
 
@@ -27,7 +41,8 @@
       </button>
     </form>
   </div>
-</div>
-<div *ngIf="loading">
-  <app-loader></app-loader>
+
+  <div *ngIf="loading">
+    <app-loader></app-loader>
+  </div>
 </div>
