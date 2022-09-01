@@ -1,3 +1,4 @@
+import { DetailsComponent } from './components/details/details.component';
 import { HomeComponent } from './components/home/home.component';
 import { AuthGuard } from './guards/auth.guard';
 import { LoginComponent } from './components/login/login.component';
@@ -20,6 +21,11 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     component: HomeComponent,
   },
+  {
+    path: 'home/:id',
+    component: DetailsComponent,
+  },
+
   { path: '**', component: NotFoundComponent },
 ];
 

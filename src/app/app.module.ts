@@ -14,6 +14,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
+import { DetailsComponent } from './components/details/details.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { MatCardModule } from '@angular/material/card';
     LoginComponent,
     NotFoundComponent,
     HomeComponent,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,7 @@
+import { CommunicationService } from './../../services/communication.service';
 import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,12 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   offersData: any[] = [];
-  constructor(private authService: AuthService) {}
+  constructor(
+    private communicationService: CommunicationService,
+    private authService: AuthService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
-    this.authService
+    this.communicationService
       .getOffers()
       .subscribe((result) => (this.offersData = result));
+  }
+
+  onSelect(id: any) {
+    this.router.navigate(['/home', id.id]);
   }
 
   logout() {

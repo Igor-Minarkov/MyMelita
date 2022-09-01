@@ -1,4 +1,4 @@
-<button (click)="logout()">Logout</button>
+<button (click)="logout()" class="logout-button">Logout</button>
 <div class="wrapper">
   <div class="background">
     <div class="imgs-wrapper">
@@ -18,7 +18,7 @@
         src="https://www.melita.com/wp-content/plugins/melita-homepage/img/icons.png"
       />
       <h2>{{ offer.name }}</h2>
-      <button mat-button>More</button>
+      <button mat-button (click)="onSelect(offer)">More</button>
     </mat-card>
   </div>
 </div>

@@ -73,6 +73,13 @@
     }
   }
 }
+.logout-button {
+  float: right;
+  padding: 30px 30px;
+  border-bottom-left-radius: 50px 30px;
+  font-size: 16px;
+  text-shadow: 1px 1px blue;
+}
 
 @media only screen and (max-width: 900px) {
   .card {
