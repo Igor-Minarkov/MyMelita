@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   offersData: any[] = [];
+  loading: boolean = false;
 
   constructor(
     private communicationService: CommunicationService,
@@ -18,9 +19,12 @@ export class HomeComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.loading = true;
     this.communicationService
       .getOffers()
-      .subscribe((result) => (this.offersData = result));
+      .subscribe(
+        (result) => ((this.offersData = result), (this.loading = false))
+      );
   }
 
   onSelect(id: any) {

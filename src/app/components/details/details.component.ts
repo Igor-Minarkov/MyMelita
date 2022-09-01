@@ -8,6 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./details.component.scss'],
 })
 export class DetailsComponent implements OnInit {
+  loading: boolean = false;
   data: any[] = [];
   constructor(
     private communicationService: CommunicationService,
@@ -15,9 +16,10 @@ export class DetailsComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.loading = true;
     let id = this.route.snapshot.params['id'];
     this.communicationService
       .getSubscriptions(id)
-      .subscribe((result) => (this.data = result));
+      .subscribe((result) => ((this.data = result), (this.loading = false)));
   }
 }

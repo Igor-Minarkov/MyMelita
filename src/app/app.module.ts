@@ -16,6 +16,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { DetailsComponent } from './components/details/details.component';
 import { TopbarComponent } from './components/topbar/topbar.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { TopbarComponent } from './components/topbar/topbar.component';
     HomeComponent,
     DetailsComponent,
     TopbarComponent,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,

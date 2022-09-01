@@ -62,14 +62,3 @@
     }
   }
 }
-
-.mat-spinner {
-  position: fixed;
-  top: calc(50% - 50px);
-  left: calc(50% - 50px);
-}
-
-.mat-spinner-custom-color ::ng-deep .mat-progress-spinner circle,
-.mat-spinner circle {
-  stroke: white;
-}
