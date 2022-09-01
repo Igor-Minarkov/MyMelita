@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  offersData: any[] = [];
   constructor(private authService: AuthService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.authService
+      .getOffers()
+      .subscribe(
+        (result) => ((this.offersData = result), console.log(this.offersData))
+      );
+  }
 
   logout() {
     this.authService.logout();
