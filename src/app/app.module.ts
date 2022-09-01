@@ -15,6 +15,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { DetailsComponent } from './components/details/details.component';
+import { TopbarComponent } from './components/topbar/topbar.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { DetailsComponent } from './components/details/details.component';
     NotFoundComponent,
     HomeComponent,
     DetailsComponent,
+    TopbarComponent,
   ],
   imports: [
     BrowserModule,
