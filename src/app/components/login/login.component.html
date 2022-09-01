@@ -1,0 +1,33 @@
+<div class="wrapper">
+  <div class="block">
+    <p>melita</p>
+
+    <form [formGroup]="login">
+      <mat-form-field class="matInput">
+        <mat-placeholder class="mat-placeholder">Username</mat-placeholder>
+        <input matInput formControlName="username" />
+      </mat-form-field>
+
+      <mat-form-field class="matInput">
+        <mat-placeholder class="mat-placeholder">Password</mat-placeholder>
+        <input matInput formControlName="password" />
+      </mat-form-field>
+
+      <div class="form-bottom">
+        <div class="form-bottom-left">Remember me ?</div>
+        <div><i class="bi bi-1-circle"></i>Forgot Password?</div>
+      </div>
+
+      <button
+        mat-button
+        (click)="loginSubmit(login.value)"
+        [disabled]="login.invalid"
+      >
+        Login
+      </button>
+    </form>
+  </div>
+</div>
+<div *ngIf="loading" class="mat-spinner-custom-color">
+  <mat-spinner></mat-spinner>
+</div>

@@ -1,0 +1,21 @@
+html,
+body {
+  margin: 0;
+}
+
+button {
+  width: 100px;
+  padding: 7px 13px;
+  background-color: #87ceeb;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
