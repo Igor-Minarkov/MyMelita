@@ -28,11 +28,13 @@
   align-items: center;
   justify-content: center;
   .example-card {
+    padding: 20px;
     max-width: 350px;
     margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: justify;
 
     mat-card-subtitle {
       font-size: 16px;
@@ -43,6 +45,7 @@
       font-size: 39px;
       justify-content: center;
       display: flex;
+      margin: 15px 0 30px 0;
     }
   }
 }
