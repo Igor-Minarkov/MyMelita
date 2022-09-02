@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  offersData: any[] = [];
+  data: any[] = [];
   loading: boolean = false;
 
   constructor(
@@ -22,9 +22,7 @@ export class HomeComponent implements OnInit {
     this.loading = true;
     this.communicationService
       .getOffers()
-      .subscribe(
-        (result) => ((this.offersData = result), (this.loading = false))
-      );
+      .subscribe((result) => ((this.data = result), (this.loading = false)));
   }
 
   onSelect(id: any) {

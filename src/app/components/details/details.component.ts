@@ -18,8 +18,11 @@ export class DetailsComponent implements OnInit {
   ngOnInit() {
     this.loading = true;
     let id = this.route.snapshot.params['id'];
-    this.communicationService
-      .getSubscriptions(id)
-      .subscribe((result) => ((this.data = result), (this.loading = false)));
+    this.communicationService.getSubscriptions(id).subscribe(
+      (result) => ((this.data = result), (this.loading = false)),
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 }
