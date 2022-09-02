@@ -10,30 +10,12 @@ export class CommunicationService {
   constructor(private http: HttpClient) {}
 
   getOffers() {
-    let token = localStorage.getItem('token');
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`,
-    });
-
-    const requestOptions = { headers: headers };
     let url = environment.baseURL + 'offers';
-    return this.http
-      .get(url, requestOptions)
-      .pipe(map((result: any) => result.offers));
+    return this.http.get(url).pipe(map((result: any) => result.offers));
   }
 
   getSubscriptions(id: number) {
-    let token = localStorage.getItem('token');
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`,
-    });
-
-    const requestOptions = { headers: headers };
     let url = environment.baseURL + `offers/${id}/subscriptions`;
-    return this.http
-      .get(url, requestOptions)
-      .pipe(map((result: any) => result.subscriptions));
+    return this.http.get(url).pipe(map((result: any) => result.subscriptions));
   }
 }
